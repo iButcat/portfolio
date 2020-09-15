@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+html, body {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #1a1919;
+  color: white;
+}
+
+footer, .contact, #project, .jumbotron, h1, h2, h3, h4, p, a {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.jumbotron {
+  padding-top: 250px;
+  padding-bottom: 250px;
+  height: 100vh;
+  background-image: url("/img/space.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.jumbotron h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  padding: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.jumbotron p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .jumbotron p {
+    padding-top: 60px;
+    left: 55%;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .jumbotron h1 {
+    padding-top: 40px;
+    left: 50%;
+    font-size: 30px;
+  }
+}
+
+
+/*
+navbar
+*/
+
+.navbar {
+  height: 60px;
+}
+
+.nav-item {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse
+    {
+        background-color: #262626;
+        padding: 10px;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+    }
+    .navbar-collapse p {
+      color:white;
+    }
+}
+
+
+#buttonColor {
+  padding-top: 14px;
+}
+
+ .navbar a {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding: 16px 0;
+  margin: 0 12px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: color 0.1s, background-color 0.1s;
+  color: #000;
+}
+
+.navbar a:hover {
+  color: #4dd0e1;
+}
+
+.navbar a:focus, a:active {
+  color: #00bcd4;
+}
+
+.navbar a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  height: 3px;
+  width: 100%;
+  background-color: #00bcd4;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  transition: color 0.1s, -webkit-transform 0.2s ease-out;
+  transition: color 0.1s, transform 0.2s ease-out;
+  transition: color 0.1s, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+
+.navbar a:active::before {
+  background-color: #00bcd4;
+}
+
+.navbar a:hover::before,
+a:focus::before {
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+ }
+
+/*
+Contact
+*/
+
+.contact {
+  border-radius: 5px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+  padding: 100px;
+  min-height: 100%;
+}
+.title-box-2 {
+  margin-bottom: 3rem;
+}
+
+.title-left {
+  font-size: 2rem;
+  position: relative;
+}
+
+.title-left:before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background-color: #00bcd4;
+  width: 100px;
+  bottom: -12px;
+}
+
+.title-box-2 {
+  text-transform: uppercase;
+}
+
+.socials li {
+  list-style-type: none;
+  display: inline;
+  padding-left: 60px;
+  padding-left: 60px;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+  padding: 5px;
+}
+
+/*
+project
+*/
+
+#project {
+  min-height: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.card {
+  background: #fff;
+  width: 24em;
+  border-radius: 0.6em;
+  margin: 1em;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+  transition: all ease 200ms;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12), 0 8px 32px -8px hsla(0, 0%, 0%, 0.14), 0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card h2 {
+  margin-top: -0.2em;
+  line-height: 1.4;
+  font-size: 1.3em;
+  font-weight: 500;
+  transition: all ease-in 100ms;
+}
+
+
+.card h5 {
+  font-weight: 700;
+  font-size: 0.7em;
+  letter-spacing: 0.04em;
+  margin: 1.4em 0 0 0;
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding: 1.2em;
+}
+
+
+/*
+about
+*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+.skill-mf .progress {
+  background-color: #ffff;
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #00bcd4;
+}
+
+/*
+footer
+*/
+
+footer {
+  padding-bottom: 0px;
+  padding-top: 50px;
+  height: 120px;
+  background-color: #262626;
+  color: white;
+}
+
+/*
+education
+*/
+.education {
+  min-height: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
