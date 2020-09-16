@@ -18,7 +18,7 @@ function App() {
           <Route exact path='/' component={Jumbotron} />
           <Route exact path='/' component={About} />
           <Route exact path='/' component={Project} />
-          <Route exact path="article/:id" component={DetailProject} />
+          <Route exact path="/:id" component={DetailProject} />
           <Route exact path='/' component={Education} />
           <Route exact path='/' component={Contact} />
         </Layout>

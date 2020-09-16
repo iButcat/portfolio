@@ -7,10 +7,11 @@ const DetailProject = (props) => {
 
     useEffect(() => {
         const id = props.match.params.id;
+        console.log(id)
 
         const fetchData = async () => {
             try {
-                const res = await axios.get(`https://alexismorin/portfolio/api/project/${id}`);
+                const res = await axios.get(`https://alexismorin.herokuapp.com/portfolio/api/project/${id}`);
                 setProject(res.data);
             }
             catch (err) {
@@ -27,11 +28,12 @@ const DetailProject = (props) => {
     };
 
     return (
-        <div className='container mt-3'>
+        <div className='container-fluid mt-5'>
             <h1 className='display-2'>{project.title}</h1>
             <div className='mt-5 mb-5' dangerouslySetInnerHTML={createProject()} />
             <hr />
-            <p className="lead mb-5"><Link to='/' className="font-weight-bold">Back to Blogs</Link></p>
+            <p>{project.description}</p>
+            <p className="lead mb-5"><Link to='/' className="font-weight-bold">Portfolio</Link></p>
         </div>
     );
 }

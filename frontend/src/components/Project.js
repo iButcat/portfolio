@@ -17,6 +17,7 @@ const Style = {
 }
 
 const BASE_URL = "https://alexismorin.herokuapp.com/portfolio/api/project/";
+//const BASE_URL = "http://127.0.0.1:8000/portfolio/api/project";
 
 export default class Project extends Component {
   state = {
@@ -66,7 +67,7 @@ export default class Project extends Component {
                       component="p"
                       style={Style}>
                       {project.technology}
-                      <Link to={`/project/${project.id}`}
+                      <Link to={`/${project.id}`}
                         className="stretched-link">
                         Continue reading</Link>
                     </Typography>
