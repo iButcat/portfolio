@@ -16,7 +16,7 @@ SECRET_KEY = "-$ipop(k-_%-8@)-z2d2-p76%@r8gpm=unz*ir&cn4c%3fy+6+"
 DEBUG = True
 
 ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1',
-                 'alexismorin.herokuapp.com']
+                 'alexismorin.herokuapp.com', '127.0.0.1:3000']
 
 
 INSTALLED_APPS = [
@@ -72,11 +72,11 @@ WSGI_APPLICATION = 'pyproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': ''
+        'NAME': os.getenv("DB_NAME"),
+        'USER': os.getenv("DB_USER"),
+        'PASSWORD': os.getenv("DB_PASSWORD"),
+        'HOST': os.getenv("DB_HOST"),
+        'PORT': os.getenv("DB_PORT")
     }
 }
 
@@ -122,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
