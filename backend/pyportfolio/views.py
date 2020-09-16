@@ -1,19 +1,15 @@
 from django.shortcuts import render
 from PIL import *
 from django.urls import reverse_lazy
-from django.views.generic.edit import FormView
 
 from .serializers import ProjectSerializers, ContactSerializers
 from pyportfolio.models import Project, Contact
 from . import models
-from .forms import ContactForm
 
 from rest_framework.generics import  (
 ListAPIView, RetrieveAPIView, CreateAPIView
 )
 from rest_framework.permissions import AllowAny
-from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from rest_framework import status
