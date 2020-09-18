@@ -1,6 +1,7 @@
 import os
 import psycopg2
 import environ
+import sys
 
 env = environ.Env()
 # reading .env file
@@ -79,6 +80,10 @@ DATABASES = {
         'PORT': os.getenv("DB_PORT")
     }
 }
+
+if 'test' in sys.argv or 'test_coverage' in sys.argv: 
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
+    DATABASES['default']['NAME'] = ':memory:'
 
 import dj_database_url
 
