@@ -14,7 +14,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
     serializer_class = ProjectSerializers
 
 
-# Contact Viewset
 class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all()
     permissions_classes = [
@@ -23,7 +22,6 @@ class ContactViewSet(viewsets.ModelViewSet):
     serializer_class = ContactSerializers
 
 
-# Certification And Book Viewset
 class CertificationAndBookViewSet(viewsets.ModelViewSet):
     queryset = CertificationAndBook.objects.all()
     permissions_classes = [
