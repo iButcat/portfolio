@@ -140,8 +140,16 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_S3_REGION_NAME = 'eu-west-3'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 
-
+# in dev only
 CORS_ORIGIN_ALLOW_ALL = True
+
+# for production
+"""
+CORS_ORIGIN_WHITELIST = [
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:3000",
+]
+"""
 
 CORS_ALLOW_HEADERS = (
         'x-requested-with',
@@ -153,13 +161,16 @@ CORS_ALLOW_HEADERS = (
 )
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-   'rest_framework.permissions.AllowAny'],
+'DEFAULT_PERMISSION_CLASSES': [
+   'rest_framework.permissions.IsAdminUser'],
    'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
         'rest_framework.parsers.FormParser',
         'rest_framework.parsers.MultiPartParser',
     ],
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
 }
 
 # django_heroku
