@@ -37,14 +37,14 @@ class PortfolioDetailView(RetrieveAPIView):
 
 
 class ContactCreateView(CreateAPIView):
-    serializer_class = ContactSerializers
     queryset = Contact.objects.all()
+    serializer_class = ContactSerializers
     permission_classes= (AllowAny,)
 
-    def post(self,request):
+    def post(self,request, *args, **kargs):
         parser_classes = (MultiPartParser, )
-        serializer = ContactSerializers(data=request.data)
+        serializer = ContactSerializers(data=self.queryset)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
