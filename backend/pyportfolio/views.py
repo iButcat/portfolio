@@ -41,7 +41,7 @@ class ContactCreateView(CreateAPIView):
     serializer_class = ContactSerializers
     permission_classes= (AllowAny,)
 
-    def post(self,request, *args, **kargs):
+    def post(self,request):
         parser_classes = (MultiPartParser, )
         serializer = ContactSerializers(data=self.queryset)
         if serializer.is_valid():
