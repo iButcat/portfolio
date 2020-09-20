@@ -33,5 +33,24 @@ class TestPermission(TestCase):
         permission = permission_check.has_permission(request, None)
         self.assertFalse(permission)
 
-    def test_access_post_no_permission(self):
-        request = self.factory.post('/api/project')
+    def test_post_no_permission(self):
+        request = self.factory.post('/api/project', {
+        'title': 'test',
+        'description': 'some text',
+        'technology': 'django'
+        })
+        request.user = self.random_user
+        permission_check = IsAdminUser()
+        permission = permission_check.has_permission(request, None)
+        self.assertFalse(permission)
+
+    def test_post_with_permission(self):
+        request = self.factory.post('/api/project', {
+        'title': 'test',
+        'description': 'some text',
+        'technology': 'django'
+        })
+        request.user = self.admin_user
+        permission_check = IsAdminUser()
+        permission = permission_check.has_permission(request, None)
+        self.assertTrue(permission)
