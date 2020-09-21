@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { RiMenu3Line } from 'react-icons/ri';
 
-import ButtonColor from './ButtonColor';
-
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -39,7 +37,7 @@ export default class Navbar extends Component {
       <div className="container">
         <nav className="navbar navbar-expand-lg fixed-top"
           style={{
-            backgroundColor: this.state.status === "top" ? "transparent" : "#262626",
+            backgroundColor: this.state.status === "top" ? "transparent" : "#485461",
             color: this.state.status === "top" ? "white" : "white"
           }}>
           <Link
@@ -103,7 +101,6 @@ export default class Navbar extends Component {
                   duration={500}>
                   Contact</Link>
               </li>
-              <li className="nav-item" id="buttonColor"><ButtonColor /></li>
             </ul>
           </div>
         </nav>
