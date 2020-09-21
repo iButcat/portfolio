@@ -8,6 +8,8 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
 
+// https://alexismorin.herokuapp.com/portfolio/api/contact/
+
 const initialState = {
   name: "",
   email: "",
@@ -79,7 +81,7 @@ export default class Contact extends Component {
       email: this.state.email,
       message: this.state.message,
     };
-    axios.post('https://alexismorin.herokuapp.com/portfolio/api/contact/', contactObject)
+    axios.post('http://127.0.0.1:8000/portfolio/contact/', contactObject)
     .then((res) => {
       console.log(res.data)
     }).catch((error) => {
