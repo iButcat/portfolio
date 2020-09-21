@@ -72,7 +72,7 @@ export default class About extends React.Component {
                     <div className="row">
                       <div
                         className="col-sm-6 col-md-5"
-                        style={{ margin: "0 auto" }}>
+                        style={{ margin: "0 auto" }} id='element'>
                         <div
                           className="about-img"
                           style={{ textAlign: "center" }}>
