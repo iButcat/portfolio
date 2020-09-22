@@ -1,8 +1,7 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { AiFillGithub } from "react-icons/ai";
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -38,6 +37,8 @@ export default class Project extends Component {
     return (
         <div className="project">
           <div className="container-fluid">
+            <h3 className="text-center" id="portfolio-title">
+              Projects</h3>
             <div className="row">
           {this.state.projects.map((project, id) => (
             <div key={project.id} className="col-sm-12 col-md-4 col-xs-12">
@@ -56,13 +57,13 @@ export default class Project extends Component {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary">
+                <Button size="small" color="default">
                   <Link to={`${project.id}`}>Learn More</Link>
                 </Button>
-                <Button size="small" color="primary">
-                  <a href={project.Github} target="_blank">
+                <Button size="small" color="default">
+                  <a href={project.Github} target="_blank" rel="noopener noreferrer">
                     Source Code
-                    <AiFillGithub size={20} style={{ color: "black" }}/>
+                     <AiFillGithub size={20} style={{ color: "black" }}/>
                   </a> 
                 </Button>
               </CardActions>

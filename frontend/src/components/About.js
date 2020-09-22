@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from "prop-types";
 
 
-export default class About extends React.Component {
+export default class About extends Component {
   constructor() {
     super();
     this.state = {

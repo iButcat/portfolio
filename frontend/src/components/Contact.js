@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import PropTypes from 'prop-types';
-import { Button, Form, Alert } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { FiSend } from "react-icons/fi";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
@@ -110,12 +109,12 @@ export default class Contact extends Component {
               <div className="socials">
                 <ul>
                   <li>
-                    <a href="https://www.linkedin.com/in/alexis-morin-8244291a9/" target="_blank">
+                    <a href="https://www.linkedin.com/in/alexis-morin-8244291a9/" target="_blank" rel="noopener noreferrer">
                       <AiFillLinkedin size={40} style={{ color: "grey" }}/>
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/iButcat" target="_blank">
+                    <a href="https://github.com/iButcat" target="_blank" rel="noopener noreferrer">
                       <AiFillGithub size={40} style={{ color: "grey" }}/>
                     </a>
                   </li>
