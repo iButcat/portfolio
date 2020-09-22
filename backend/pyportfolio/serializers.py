@@ -12,7 +12,7 @@ class ProjectSerializers(serializers.ModelSerializer):
 class ContactSerializers(serializers.ModelSerializer):
     class Meta:
         model = Contact
-        fields = ('name', 'email', 'message')
+        fields = ('name', 'email', 'message', 'date_contact')
 
 
 class CertificationAndBookSerializers(serializers.ModelSerializer):

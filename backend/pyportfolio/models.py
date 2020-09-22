@@ -27,6 +27,7 @@ class Contact(models.Model):
     name = models.CharField(max_length=30)
     email = models.EmailField()
     message = models.TextField(max_length=300)
+    date_contact = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return "@: {}".format(self.email)
