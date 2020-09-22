@@ -52,7 +52,7 @@ export default class Project extends Component {
                     {project.title}
                   </Typography>
                   <Typography variant="body2" color="white" component="p">
-                    {project.description.substring(0, 250)}
+                    {project.description.substring(0, 250)}...
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -62,8 +62,8 @@ export default class Project extends Component {
                 </Button>
                 <Button size="small" color="default">
                   <a href={project.Github} target="_blank" rel="noopener noreferrer">
+                     <AiFillGithub size={25} style={{ color: "grey", padding: "3px" }}/>
                     Source Code
-                     <AiFillGithub size={20} style={{ color: "black" }}/>
                   </a> 
                 </Button>
               </CardActions>

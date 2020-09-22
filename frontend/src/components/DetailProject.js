@@ -7,7 +7,6 @@ const DetailProject = (props) => {
 
     useEffect(() => {
         const id = props.match.params.id;
-        console.log(id)
 
         const fetchData = async () => {
             try {
@@ -28,13 +27,20 @@ const DetailProject = (props) => {
     };
 
     return (
-        <div className='container-fluid mt-5'>
-            <h1 className='display-2'>{project.title}</h1>
-            <div className='mt-5 mb-5' dangerouslySetInnerHTML={createProject()} />
-            <hr />
-            <p>{project.description}</p>
-            <p className="lead mb-5"><Link to='/' className="font-weight-bold">Portfolio</Link></p>
-        </div>
+        <div className='container-fluid mt-5' id="detail-project">
+          <div className="row">
+            <div className="col col-sm-6">
+              <img className="img-fluid" alt="project" id="detail-image" src={project.image} />
+           </div>
+           <div className="col col-sm-6">
+             <h1 className='text-center'>{project.title}</h1>
+             <div className='text-center'dangerouslySetInnerHTML={createProject()} />
+             <hr />
+             <p>{project.description}</p>
+             <p className="lead mb-5"><Link to='/' className="font-weight-bold">Back to Portfolio</Link></p>
+           </div>
+         </div>
+       </div>
     );
 }
 

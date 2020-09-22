@@ -19,7 +19,8 @@ const initialState = {
 }
 
 const Style = {
-  backgroundColor: 'inherit'
+  backgroundColor: 'inherit',
+  color: 'inherit'
 }
 
 export default class Contact extends Component {
@@ -125,7 +126,7 @@ export default class Contact extends Component {
               <div className="title-box-2">
                 <h5 className="title-left">Send A Message</h5>
               </div>
-              <Form id={this.props.id}>
+              <Form id={this.props.id} onSubmit={this.onSubmit}>
                 <Form.Group>
                   <Form.Label>Name</Form.Label>
                   <Form.Control
@@ -163,10 +164,7 @@ export default class Contact extends Component {
                     rows="3" />
                   <div className="error">{this.state.messageError}</div>
                 </Form.Group>
-                <Button
-                  variant="primary"
-                  onClick={this.onSubmit}>
-                  Send <FiSend /></Button>
+                <Button variant="primary"> Send <FiSend /></Button>
               </Form>
             </div>
           </div>

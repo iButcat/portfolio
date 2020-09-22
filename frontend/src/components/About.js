@@ -34,27 +34,39 @@ export default class About extends Component {
         {
           id: "Golang_skill",
           content: "Golang",
+          porcentage:"50%",
+          value: "50"
+        },
+        {
+          id: "Git",
+          content: "Git",
+          porcentage: "80%",
+          value: "80"
+        },
+        {
+          id: "Java_skill",
+          content: "Java",
           porcentage:"40%",
           value: "40"
         },
         {
-          id: "Vim_Git",
-          content: "Vim/Git",
-          porcentage: "85%",
-          value: "85"
+          id: "Spring_skill",
+          content: "Spring",
+          porcentage:"40%",
+          value: "40"
         },
       ],
       about_me: [
         {
           id: "first-p-about",
           content:
-            "Self-taught and enthusiast learner, from the moment I produced “Hello World” in the console of my first application, I knew I was hooked into the world of software development. But software development has never been “just a job” for me, it’s offered an engaging challenge to continually learn and improve my skills by creating software. What started with a simple “Hello World” has become a full-fledged passion that only gets more exciting as the time go by."
+            "Self-taught and enthusiast learner, from the moment I produced “Hello World” in the console of my first application, I knew I was hooked into the world of software development. But software development has never been “just a job” for me, it’s offered an engaging challenge to continually learn and improve my skills by creating software. What started with a simple “Hello World” has become a passion that only gets more exciting as the time go by."
         },
         {
           id: "second-p-about",
           content:
-            "Web development, cybersecurity, machine learning, Linux, I have a big interest for technology. I also love to read and learn about a lot of topics in general! I think my greatest quality as a self-learner is my ability to organize myself to stay motivated in all situations. Debugging being one of the most complicated parts with development, I always want to clear my mind by walking in nature and then come back with a cool head"
-        }
+            "I work with both the front and back ends of a website or sotfware application. I design client-side and server-side architecture with well-functioning databases. I also have experienced with writting effective APIs and testing software. Troubleshoot, debug and upgrade software, I try to cover everything while writting technical documentation. I care about best practices, clean code and architecture since I have been reading about two books of Robert C. Martin which are clean code and clean architecture."
+        },
       ]
     };
   }
@@ -112,9 +124,11 @@ export default class About extends Component {
                       </div>
                       {this.state.about_me.map(content => {
                         return (
-                          <p className="lead" key={content.id}>
+                          <div key={content.id}>
+                          <p className="lead">
                             {content.content}
                           </p>
+                          </div>
                         );
                       })}
                     </div>
