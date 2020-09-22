@@ -281,7 +281,7 @@ footer {
   padding-bottom: 0px;
   padding-top: 50px;
   height: 120px;
-  background-color: #262626;
+  background-color: #485461;
   color: white;
 }
 
@@ -292,4 +292,16 @@ education
   min-height: 100%;
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+/*
+detail project
+*/
+
+#detail-project {
+  padding: 200px;
+}
+
+#detail-image {
+  background-position: center;
 }
