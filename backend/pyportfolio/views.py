@@ -2,8 +2,12 @@ from django.shortcuts import render
 from PIL import *
 from django.urls import reverse_lazy
 
-from .serializers import ProjectSerializers, ContactSerializers
-from pyportfolio.models import Project, Contact
+from .serializers import (
+ProjectSerializers,
+ContactSerializers,
+CertificationAndBookSerializers
+)
+from pyportfolio.models import Project, Contact, CertificationAndBook
 from . import models
 
 from rest_framework.generics import (
@@ -48,3 +52,16 @@ class ContactCreateView(CreateAPIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+
+
+class EducationListView(ListAPIView):
+    queryset = CertificationAndBook.objects.all()
+    serializer_class = CertificationAndBookSerializers
+    permission_classes = (AllowAny,)
+
+
+class EducationDetailView(RetrieveAPIView):
+    lookup_field = 'pk'
+    queryset = CertificationAndBook.objects.all()
+    serializer_class = CertificationAndBookSerializers
+    permission_classes = (AllowAny,)
