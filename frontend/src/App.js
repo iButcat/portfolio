@@ -7,6 +7,7 @@ import Project from './components/Project';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import DetailProject from './components/DetailProject';
+import DetailEducation from './components/DetailEducation';
 
 import Layout from './hocs/Layout';
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/:id" component={DetailEducation}/>
         <Route exact path="/:id" component={DetailProject} />
         <Fragment>
         <Layout>
