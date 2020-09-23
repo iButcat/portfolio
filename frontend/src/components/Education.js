@@ -19,14 +19,14 @@ const BASE_URL = "https://alexismorin.herokuapp.com/portfolio/api/education/"
 
 export default class Education extends Component {
   state = {
-    projects: []
+    educations: []
   }
 
   componentDidMount() {
     fetch(BASE_URL)
       .then(res => res.json())
-      .then(projects => {
-        this.setState({ projects })
+      .then(educations => {
+        this.setState({ educations })
       });
   }
 
@@ -38,25 +38,25 @@ export default class Education extends Component {
             Certifications And Books</h3>
 
           <div className="row">
-            {this.state.projects.map((project, id) => (
-              <div className="col-sm-12 col-md-4 col-xs-12" key={project.id}>
+            {this.state.educations.map((education, id) => (
+              <div className="col-sm-12 col-md-4 col-xs-12" key={education.id}>
                 <Card className="card" style={Style}>
                   <CardActionArea>
                     <CardMedia>
-                      <img src={project.image} alt="project-img" id="project-img"/>
+                      <img src={education.image} alt="project-img" id="project-img"/>
                     </CardMedia>
                     <CardContent>
                       <Typography gutterBottim variant="h5" component="h2">
-                        {project.title}
+                        {education.title}
                       </Typography>
                       <Typography variant="body2" color="white" component="p">
-                        {project.description.substring(0, 250)}
+                        {education.description.substring(0, 250)}
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
                     <Button size="small" color="primary">
-                      <Link to={`${project.id}`}>Learn More</Link>
+                      <Link to={`${education.id}`}>Learn More</Link>
                     </Button>
                   </CardActions>
                 </Card>
