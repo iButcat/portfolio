@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/:id" component={DetailEducation}/>
+        <Route exact path="/:id" component={DetailEducation} />
         <Route exact path="/:id" component={DetailProject} />
         <Fragment>
         <Layout>
