@@ -14,11 +14,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "-$ipop(k-_%-8@)-z2d2-p76%@r8gpm=unz*ir&cn4c%3fy+6+"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1',
                  'alexismorin.herokuapp.com', '127.0.0.1:3000',
-                 os.getenv("AWS_ELASTIC_BEAN_HOST")]
+                 "django-env.eba-e8hatvbn.us-west-2.elasticbeanstalk.com"]
 
 
 INSTALLED_APPS = [
@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'pyportfolio',
     'rest_framework',
@@ -130,7 +129,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/images/'
 
@@ -178,6 +176,3 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     )
 }
-
-# django_heroku
-#django_heroku.settings(locals())
