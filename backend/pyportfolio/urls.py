@@ -2,7 +2,9 @@ from django.urls import include, re_path, path
 from .views import (
 PortfolioListView,
 PortfolioDetailView,
-ContactCreateView
+ContactCreateView,
+EducationListView,
+EducationDetailView
 )
 
 from rest_framework import routers
@@ -19,5 +21,7 @@ urlpatterns = [
  re_path('api/', include(router.urls)),
  path('project/', PortfolioListView.as_view()),
  path('project/<int:pk>', PortfolioDetailView.as_view()),
- path('contact/', ContactCreateView.as_view())
+ path('contact/', ContactCreateView.as_view()),
+ path('education/', EducationListView.as_view()),
+ path('education/<int:pk>', EducationDetailView.as_view()),
 ]
