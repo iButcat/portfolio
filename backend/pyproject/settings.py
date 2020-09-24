@@ -17,8 +17,7 @@ SECRET_KEY = "-$ipop(k-_%-8@)-z2d2-p76%@r8gpm=unz*ir&cn4c%3fy+6+"
 DEBUG = False
 
 ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1',
-                 'alexismorin.herokuapp.com', '127.0.0.1:3000',
-                 "django-env.eba-i8ph24ax.us-west-2.elasticbeanstalk.com"]
+                 'alexismorin.herokuapp.com', '127.0.0.1:3000']
 
 
 INSTALLED_APPS = [
