@@ -18,7 +18,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1',
                  'alexismorin.herokuapp.com', '127.0.0.1:3000',
-                 "django-env.eba-6m7vewe8.us-west-2.elasticbeanstalk.com"]
+                 "django-env.eba-i8ph24ax.us-west-2.elasticbeanstalk.com"]
 
 
 INSTALLED_APPS = [
