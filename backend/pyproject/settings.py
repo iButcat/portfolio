@@ -11,12 +11,12 @@ environ.Env.read_env()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "-$ipop(k-_%-8@)-z2d2-p76%@r8gpm=unz*ir&cn4c%3fy+6+"
+SECRET_KEY = "-$ipop(k-_%-8@)-z2d2-p76%@r8gpm=unz*ir&cn4c%3fy+6+" # change the key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*'] # set the correct host
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -72,6 +72,7 @@ DATABASES = {
     }
 }
 
+# create sqlite db for testing purpose
 if 'test' in sys.argv or 'test_coverage' in sys.argv:
     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
     DATABASES['default']['NAME'] = ':memory:'
