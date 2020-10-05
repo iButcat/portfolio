@@ -2,7 +2,7 @@
 
 <h3>Django/React</h3>
 
-<p>A full-stack application allowing you to dynamically add new projects and receive contacts. The backend of the app uses Django and serves the data through an API that allows React to fetch into those datas. </p>
+<p>A full-stack tested application allowing you to dynamically add new projects and receive contacts. The backend of the app uses Django and serves the data through an API that allows React to fetch into those datas. </p>
 
 <h3>old design is available here </h3>
 
