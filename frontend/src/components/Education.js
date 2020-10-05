@@ -15,7 +15,7 @@ const Style = {
   color: 'inherit'
 }
 
-const BASE_URL = "https://alexismorin.herokuapp.com/portfolio/api/education/"
+const BASE_URL = "http://127.0.0.1:8000/portfolio/portfolio/api/education/"
 
 export default class Education extends Component {
   state = {

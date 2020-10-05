@@ -10,7 +10,7 @@ const DetailEducation = (props) => {
 
         const fetchData = async () => {
             try {
-                const res = await axios.get(`https://alexismorin.herokuapp.com/portfolio/api/education/${id}`);
+                const res = await axios.get(`http://127.0.0.1:8000/portfolio/api/education/${id}`);
                 setEducation(res.data);
             }
             catch (err) {

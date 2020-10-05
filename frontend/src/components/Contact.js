@@ -7,7 +7,6 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
 
-// https://alexismorin.herokuapp.com/portfolio/api/contact/
 
 const initialState = {
   name: "",

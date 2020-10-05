@@ -10,7 +10,7 @@ const DetailProject = (props) => {
 
         const fetchData = async () => {
             try {
-                const res = await axios.get(`https://alexismorin.herokuapp.com/portfolio/api/project/${id}`);
+                const res = await axios.get(`http://127.0.0.1:8000/portfolio/portfolio/api/project/${id}`);
                 setProject(res.data);
             }
             catch (err) {
