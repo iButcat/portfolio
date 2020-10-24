@@ -109,7 +109,7 @@ export default class Contact extends Component {
               <div className="socials">
                 <ul>
                   <li>
-                    <a href="https://www.linkedin.com/in/alexis-morin-8244291a9/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                       <AiFillLinkedin size={40} style={{ color: "grey" }}/>
                     </a>
                   </li>
